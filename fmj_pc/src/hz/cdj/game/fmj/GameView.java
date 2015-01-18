@@ -18,7 +18,7 @@ import java.util.Stack;
 import javax.swing.JFrame;
 
 import android.graphics.Canvas;
-import android.graphics.Rect;
+
 
 public class GameView extends JFrame implements Runnable{
 	private static final long serialVersionUID = 4865220132498519554L;
