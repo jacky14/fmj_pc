@@ -7,4 +7,6 @@
 src文件夹包含源码文件
 assets文件夹包含伏魔记游戏资源、字库文件、存档文件
 
-程序大部分源码来源android版伏魔记(作者不详)，这个版本修改了绘图和事件监听可在电脑端运行
+程序大部分源码来源android版伏魔记(作者不详)安卓版源码地址https://github.com/cdd990/fmj
+
+这个版本修改了绘图和事件监听可在电脑端运行源码地址https://github.com/jacky14/fmj_pc/tree/master/fmj_pc
