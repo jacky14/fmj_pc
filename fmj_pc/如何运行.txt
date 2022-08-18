@@ -1,6 +1,9 @@
 1.下载JDK（运行java程序必备环境，大概100M），https://www.java.com/zh-CN/download/
 2.配置JDK环境变量（自行百度或者谷歌）
-3.双击“开始游戏(window).cmd|开始游戏(mac|linux).sh”开始游戏
+3.命令行进入src、assets同级目录下 cd */fmj_pc/fmj_pc
+4.执行编译命令： javac -encoding UTF8 -sourcepath src -d bin src/hz/cdj/game/fmj/GameView.java
+5.执行启动命令： java -classpath bin hz.cdj.game.fmj.GameView
+
 方向键控制“上下左右”小键盘1/2/3/6 确定/返回/下翻页/上翻页(hz.cdj.game.fmj.GameView.addL()方法设置)
 
 
