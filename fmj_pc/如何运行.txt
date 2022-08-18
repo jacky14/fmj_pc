@@ -4,7 +4,7 @@
 4.执行编译命令： javac -encoding UTF8 -sourcepath src -d bin src/hz/cdj/game/fmj/GameView.java
 5.执行启动命令： java -classpath bin hz.cdj.game.fmj.GameView
 
-方向键控制“上下左右”小键盘1/2/3/6 确定/返回/下翻页/上翻页(hz.cdj.game.fmj.GameView.addL()方法设置)
+wsad键控制“上下左右”; j/k/u/i键=确定/返回/下翻页/上翻页(hz.cdj.game.fmj.GameView.addL()方法设置)
 
 
 src文件夹包含源码文件

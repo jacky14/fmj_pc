@@ -223,28 +223,28 @@ public class GameView extends JFrame implements Runnable{
 			int c(int c){
 				int key = -1;
 				switch (c) {
-				case 37:
+				case 65:
 					key = Global.KEY_LEFT;
 					break;
-				case 39:
+				case 68:
 					key = Global.KEY_RIGHT;
 					break;
-				case 38:
+				case 87:
 					key = Global.KEY_UP;
 					break;
-				case 40:
+				case 83:
 					key = Global.KEY_DOWN;
 					break;
-				case 99:
+				case 85:
 					key = Global.KEY_PAGEDOWN;
 					break;
-				case 102:
+				case 73:
 					key = Global.KEY_PAGEUP;
 					break;
-				case 97:
+				case 74:
 					key = Global.KEY_ENTER;
 					break;
-				case 98:
+				case 75:
 					key = Global.KEY_CANCEL;
 					break;
 				}
