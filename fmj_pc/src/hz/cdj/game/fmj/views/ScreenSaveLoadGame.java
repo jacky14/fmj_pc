@@ -22,8 +22,8 @@ import android.graphics.Canvas;
 public class ScreenSaveLoadGame extends BaseScreen {
 	
 	public enum Operate {
-		SAVE,	// ±£´æ½ø¶È
-		LOAD	// ¶ÁÈ¡½ø¶È
+		SAVE,	// ä¿å­˜è¿›åº¦
+		LOAD	// è¯»å–è¿›åº¦
 	}
 	
 	private int[][] mTextPos = {
@@ -32,7 +32,7 @@ public class ScreenSaveLoadGame extends BaseScreen {
 			{68, 74}
 	};
 	private int mIndex = 0;
-	private final String mEmpty = "¿Õµµ°¸    ";
+	private final String mEmpty = "ç©ºæ¡£æ¡ˆ    ";
 	private String[] mText = {mEmpty, mEmpty, mEmpty};
 	private ArrayList<ArrayList<ResImage>> mHeadImgs = new ArrayList<ArrayList<ResImage>>();
 	
@@ -40,7 +40,7 @@ public class ScreenSaveLoadGame extends BaseScreen {
 	
 	private Operate mOperate;
 	
-	private ResImage mImgBg;	// ±³¾°Í¼Æ¬
+	private ResImage mImgBg;	// èƒŒæ™¯å›¾ç‰‡
 	
 	public ScreenSaveLoadGame(Operate opt) {
 		mOperate = opt;
@@ -129,18 +129,18 @@ public class ScreenSaveLoadGame extends BaseScreen {
 			GameView.getInstance().popScreen();
 		} else if (key == Global.KEY_ENTER) {
 			final File file = new File("./assets/"+mFileNames[mIndex]);//GameActivity.instance.getFileStreamPath(mFileNames[mIndex]);
-			if (mOperate == Operate.LOAD) { // ¼ÓÔØ´æµµ
+			if (mOperate == Operate.LOAD) { // åŠ è½½å­˜æ¡£
 				if (!file.exists()) {
 					return;
 				}
-				if (loadGame(file)) { // ¶Áµµ³É¹¦
+				if (loadGame(file)) { // è¯»æ¡£æˆåŠŸ
 					SaveLoadGame.startNewGame = false;
 					GameView.getInstance().changeScreen(Global.SCREEN_MAIN_GAME);
-				} else { // ¶ÁµµÊ§°Ü
+				} else { // è¯»æ¡£å¤±è´¥
 					SaveLoadGame.startNewGame = true;
 					GameView.getInstance().changeScreen(Global.SCREEN_MENU);
 				}
-			} else { // ±£´æ´æµµ
+			} else { // ä¿å­˜å­˜æ¡£
 				if (!file.exists()) {
 					try {
 						file.createNewFile();
@@ -151,8 +151,8 @@ public class ScreenSaveLoadGame extends BaseScreen {
 					GameView.getInstance().popScreen();
 					GameView.getInstance().popScreen();
 					GameView.getInstance().popScreen();
-				} else { // Ñ¯ÎÊÊÇ·ñ¸²¸Ç´æµµ
-					GameView.getInstance().pushScreen(new ScreenMessageBox("¸²¸ÇÔ­½ø¶È?",
+				} else { // è¯¢é—®æ˜¯å¦è¦†ç›–å­˜æ¡£
+					GameView.getInstance().pushScreen(new ScreenMessageBox("è¦†ç›–åŸè¿›åº¦?",
 							new ScreenMessageBox.OnOKClickListener() {
 								
 								@Override
@@ -177,8 +177,8 @@ public class ScreenSaveLoadGame extends BaseScreen {
 		} catch (Exception e) {
 			e.printStackTrace();
 			//MobclickAgent.reportError(GameActivity.instance, e);
-			//Toast.makeText(GameActivity.instance, "-_-¡£sorry£¡¶Áµµ³ö´íÁË¡£", Toast.LENGTH_SHORT).show();
-			System.out.println("-_-¡£sorry£¡¶Áµµ³ö´íÁË¡£");
+			//Toast.makeText(GameActivity.instance, "-_-ã€‚sorryï¼è¯»æ¡£å‡ºé”™äº†ã€‚", Toast.LENGTH_SHORT).show();
+			System.out.println("-_-ã€‚sorryï¼è¯»æ¡£å‡ºé”™äº†ã€‚");
 			return false;
 		}
 		return true;
@@ -193,8 +193,8 @@ public class ScreenSaveLoadGame extends BaseScreen {
 		} catch (Exception e) {
 			e.printStackTrace();
 			//MobclickAgent.reportError(GameActivity.instance, e);
-			//Toast.makeText(GameActivity.instance, "´æµµ³ö´íÁË!", Toast.LENGTH_SHORT).show();
-			System.out.println("´æµµ³ö´íÁË!");
+			//Toast.makeText(GameActivity.instance, "å­˜æ¡£å‡ºé”™äº†!", Toast.LENGTH_SHORT).show();
+			System.out.println("å­˜æ¡£å‡ºé”™äº†!");
 			return false;
 		}
 		return true;
